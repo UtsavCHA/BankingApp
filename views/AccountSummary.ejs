@@ -1,0 +1,56 @@
+
+<html>
+<body>
+    <%- include('Nav') -%>
+    <br/>
+    <center><h1>Account Summary Page</h1></center><hr>
+    <center>
+        <div class="col-md-4"></div>
+        <div class="col-md-2">
+            <form>
+                Enter Account Number
+                <input type="text" name="ac" class="form-control" ></input>
+                <br>
+                Enter Pin Number
+                <input type="text" name="p" class="form-control" ></input> <br>
+                <input type="submit" name="submit" class="btn btn-success" value="Summary" onClick=Summary></input>
+                <h2><%=msg%></h2>
+            </form>
+        </div>
+    </center>
+    <br/><br/>
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-5">
+            <table class='table table-bordered table striped table-hover table-dark'>;
+            <% if(st){
+                %>
+        
+            <tr>
+                <td>Acno</td>
+                <td>Date</td>
+                <td>Amount</td>
+                <td>Description</td>
+            </tr>
+            
+                <% data.forEach(row => 
+                {
+
+                     %>
+
+                    <tr>
+                        <td><%=row.acno%></td>
+                        <td><%=row.dt%></td>
+                        <td><%=row.amt%></td>
+                        <td><%=row.des%></td>
+                         </tr>
+                         <%
+                        })
+                    }
+                        %>
+
+        </table>
+        </div>
+    </div>
+</body>
+</html>

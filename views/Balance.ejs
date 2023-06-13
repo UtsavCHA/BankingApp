@@ -1,0 +1,30 @@
+<html>
+    <body>
+        <%-include('Nav')-%>
+        <center><h2>Check Balance</h2></center>
+        <hr>
+        <div className="row">
+            <center>
+            <div className="col-md-4"></div>
+         <div className="col-md-5">
+          
+         <form>
+           <div class="form-row"></div>
+             <div class="form-group col-md-6">
+               <label for="inputAccount">Enter Account Number</label>
+               <input type="Account" class="form-control" id="inputAccount" placeholder="Account Number" name="ac"></input>
+             </div>
+             <div class="form-row"></div>
+             <div class="form-group col-md-6">
+               <label for="inputPin">Enter Pin Number</label>
+               <input type="Pin" class="form-control" id="inputPin" placeholder="Password" name="p"></input>
+             </div>
+             <input type="submit" name="submit" class="btn btn-success" value="Balance Amount" ></input>
+            </form>
+            </div>
+        </center>
+        <br><hr>
+        <h2><%=msg%></h2>
+                 </div>
+    </body>
+</html>
